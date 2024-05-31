@@ -6,15 +6,17 @@
 .app {
     font: var(--font-m);
 
-    background: var(--bg-color);
+    background: linear-gradient(to top, var(--bg-color), var(--inverted-bg-color));
     color: var(--primary-color);
 
     min-height: 100vh;
-    transition: 0.3s ease-in;
 }
 
 .content-page {
     display: flex;
+    justify-content: end;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .page-wrapper {

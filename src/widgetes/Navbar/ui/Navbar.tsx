@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/className'
 import * as cls from './Navbar.module.scss'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
+import { LangSwitcher } from 'widgetes/LangSwitcher/LangSwitcher'
 
 interface NavbarProps {
   className?: string
@@ -17,6 +18,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         </div>
         <div className={cls.theme}>
           <ThemeSwitcher />
+          <LangSwitcher className={cls.lang}/>
         </div>
       </div>
     </div>

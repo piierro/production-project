@@ -1,9 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const ProjectPage = () => {
+    const {t} = useTranslation('project')
+
     return (
         <div>
-            ABOUT PROJECT
+            {t('О проектах')}
         </div>
     )
 }

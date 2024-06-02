@@ -14,8 +14,8 @@ export const RoutePath: Record<AppRoutes, string> = {
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.PROJECT]: {
-   path: RoutePath.project,
-   element: <ProjectPage />
+    path: RoutePath.project,
+    element: <ProjectPage />
   },
   [AppRoutes.ABOUT]: {
     path: RoutePath.about,

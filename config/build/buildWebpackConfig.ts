@@ -8,20 +8,20 @@ import { buildDevServer } from "./buildDevServer";
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
   const { paths, mode, isDev } = options;
 
- return {
+  return {
     mode,
     entry: paths.entry,
     output: {
-        path: paths.build,
-        filename: '[name].[contenthash].js',
-        clean: true
-      },
+      path: paths.build,
+      filename: '[name].[contenthash].js',
+      clean: true
+    },
     devtool: isDev ? 'inline-source-map' : undefined,
     plugins: buildPlugins(options),
     module: {
-        rules: buildLoaders(options),
-      },
-      resolve: buildResolvers(options),
-      devServer: isDev ? buildDevServer(options) : undefined,
- }
+      rules: buildLoaders(options),
+    },
+    resolve: buildResolvers(options),
+    devServer: isDev ? buildDevServer(options) : undefined,
+  }
 }

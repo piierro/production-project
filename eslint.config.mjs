@@ -4,7 +4,8 @@ import tseslint from "typescript-eslint";
 import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 import { fixupConfigRules } from "@eslint/compat";
 import eslintReactHooks from 'eslint-plugin-react-hooks';
-import eslintReact from 'eslint-plugin-react'
+import eslintReact from 'eslint-plugin-react';
+import eslintPluguni18next from 'eslint-plugin-i18next'
 
 export default tseslint.config (
   {
@@ -12,6 +13,7 @@ export default tseslint.config (
     'react-hooks': eslintReactHooks,
     '@typescript-eslint':  tseslint.plugin,
     react: eslintReact,
+    'i18next': eslintPluguni18next
   }
   },
   {
@@ -51,6 +53,7 @@ export default tseslint.config (
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
+    'i18next/no-literal-string':  ['error', { markupOnly: true }],
    }
   }
 );

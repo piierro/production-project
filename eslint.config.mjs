@@ -12,8 +12,6 @@ export default tseslint.config (
   plugins: {
     'react-hooks': eslintReactHooks,
     '@typescript-eslint':  tseslint.plugin,
-    react: eslintReact,
-    'i18next': eslintPluguni18next
   }
   },
   {
@@ -21,7 +19,7 @@ export default tseslint.config (
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  // ...fixupConfigRules(pluginReactConfig),
+  ...fixupConfigRules(pluginReactConfig),
   {
   languageOptions: { 
     globals: {
@@ -53,8 +51,16 @@ export default tseslint.config (
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string':  ['error', { markupOnly: true }],
-    'max-len': ['error', { ignoreComments: true }],
-   }
+    'i18next/no-literal-string':  ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
+    'max-len': ['error', { ignoreComments: true, code: 100 }],
+   },
+   overrides: [
+    {
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': 'off',
+        },
+    },
+  ],
   }
 );

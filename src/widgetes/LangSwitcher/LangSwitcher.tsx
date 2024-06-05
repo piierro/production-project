@@ -6,7 +6,8 @@ import RuIcon from 'shared/assets/icons/ru.svg'
 import EnIcon from 'shared/assets/icons/en.svg'
 
 interface LangSwitcherProps {
-  className?: string
+  className?: string;
+  short?: boolean
 }
 
 export const LangSwitcher = ({ className }: LangSwitcherProps) => {
@@ -22,7 +23,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
       onClick={toggle}
     >
        
-      {i18n.language === 'ru' ? <RuIcon /> : <EnIcon />}
+      {i18n.language === 'ru' ? 'ru' : 'en'}
     </Button>
   )
 }

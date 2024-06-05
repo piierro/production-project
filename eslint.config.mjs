@@ -5,7 +5,6 @@ import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 import { fixupConfigRules } from "@eslint/compat";
 import eslintReactHooks from 'eslint-plugin-react-hooks';
 import eslintReact from 'eslint-plugin-react';
-import eslintPluguni18next from 'eslint-plugin-i18next'
 import { dirname } from "path";
 
 export default tseslint.config (

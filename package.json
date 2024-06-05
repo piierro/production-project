@@ -74,5 +74,10 @@
   "description": "",
   "overrides": {
     "eslint": "^9.4.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }

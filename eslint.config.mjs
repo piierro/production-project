@@ -6,6 +6,7 @@ import { fixupConfigRules } from "@eslint/compat";
 import eslintReactHooks from 'eslint-plugin-react-hooks';
 import eslintReact from 'eslint-plugin-react';
 import eslintPluguni18next from 'eslint-plugin-i18next'
+import { dirname } from "path";
 
 export default tseslint.config (
   {
@@ -16,7 +17,7 @@ export default tseslint.config (
   }
   },
   {
-    ignores: ['node_modules', 'build', 'eslint.config.mjs']
+    ignores: ['node_modules', 'dist']
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
@@ -30,7 +31,9 @@ export default tseslint.config (
       __IS_DEV__: true,
     },
     parserOptions: {
-      project: ['tsconfig.json']
+      project: './tsconfig.json',
+      tsconfigRootDir: dirname,
+      parser: '@typescript-eslint/parser'
     }
    }
   },
@@ -50,6 +53,7 @@ export default tseslint.config (
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
     'import/extensions': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'max-len': ['error', { ignoreComments: true, code: 100 }],

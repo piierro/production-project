@@ -1,5 +1,4 @@
 import React, { ErrorInfo, ReactNode, Suspense } from "react";
-import { withTranslation } from "react-i18next";
 import { PageError } from "widgetes/PageError";
 
 interface ErrorBoundaryProps {
@@ -11,35 +10,33 @@ interface ErrorBoundaryState {
 }
 
 class ErrorBoundary 
-    extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-    constructor(props: ErrorBoundaryProps) {
-      super(props);
-      this.state = { hasError: false };
-    }
+  extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
   
-    static getDerivedStateFromError(error: Error) {
-      // Update state so the next render will show the fallback UI.
-      return { hasError: true };
-    }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true };
+  }
   
-    componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-      // You can also log the error to an error reporting service
-      console.log(error, errorInfo);
-    }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.log(error, errorInfo);
+  }
   
-    render() {
+  render() {
     const { hasError } = this.state;
     const { children } = this.props;
-      if (hasError) {
-        return (
+    if (hasError) {
+      return (
         <Suspense fallback="">
           <PageError />
         </Suspense>
-        );
-      }
-  
-      return children; 
+      );
     }
+  
+    return children; 
+  }
 }
 
 export default ErrorBoundary;

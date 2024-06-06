@@ -12,7 +12,7 @@ export default tseslint.config (
   plugins: {
     'react-hooks': eslintReactHooks,
     '@typescript-eslint':  tseslint.plugin,
-    eslintReact
+    eslintReact,
   }
   },
   {
@@ -56,6 +56,10 @@ export default tseslint.config (
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'max-len': ['error', { ignoreComments: true, code: 100 }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
    },
   }
 );

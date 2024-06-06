@@ -3,18 +3,22 @@
 @import "themes/light";
 @import "reset";
 
-.app {
+body {
     font: var(--font-m);
-    background: linear-gradient(to top, var(--bg-color), var(--inverted-bg-color));
-    color: var(--primary-color);
+}
+
+.app {
     min-height: 100vh;
+    background: var(--bg-color);
+    transition: background .25s ease;
+    width: 100%;
+    color: var(--primary-color);
 }
 
 .content-page {
     display: flex;
-    justify-content: end;
-    max-width: 1440px;
     margin: 0 auto;
+    width: 80%;
 }
 
 .page-wrapper {

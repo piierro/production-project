@@ -1,6 +1,11 @@
 .Applink {
   color: var(--primary-color);
   text-decoration: none;
+  transition: color .35s ease;
+}
+
+.Applink:hover {
+  color: var( --inverted-secondory-color)
 }
 
 .primary {
@@ -8,5 +13,5 @@
 }
 
 .secondary {
-    color: var(--inverted-primary-color);
+  color: var(--inverted-primary-color);
 }

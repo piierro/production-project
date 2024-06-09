@@ -60,6 +60,7 @@ export default tseslint.config (
     "react-hooks/exhaustive-deps": "error",
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
+    'no-param-reassign': 'off'
    },
   }
 );

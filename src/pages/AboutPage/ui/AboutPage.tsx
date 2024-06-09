@@ -1,31 +1,30 @@
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Modal } from 'shared/ui/Modal/Modal'
 import * as cls from './AboutPage.module.scss'
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { LoginModal } from 'features/AuthByUsername';
 
 const AboutPage = () => {
   const {t} = useTranslation('О себе');
-  const [isModal, setIsModal] = useState(false);
+  const [isAuthModal, setIsAuthModal] = useState(false);
 
-  const onToggleModal = useCallback(() => {
-    setIsModal((prev) => !prev);
+  const onCloseModal = useCallback(() => {
+    setIsAuthModal(false);
+  }, []);
+
+  const onShowModal = useCallback(() => {
+    setIsAuthModal(true);
   }, []);
 
   return (
     <div className={cls.AboutPage}>
       <Button 
         theme={ThemeButton.OUTLINE}
-        onClick={onToggleModal}
+        onClick={onShowModal}
       >
         {t('О себе')}
       </Button>
-      <Modal isOpen={isModal} onClose={onToggleModal}>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-        Libero, dolor similique? Enim culpa consequatur veniam atque 
-        dignissimos optio consequuntur ullam iure dolores! Omnis ea 
-        tempore exercitationem tenetur obcaecati eos repellendus.
-      </Modal>
+      <LoginModal isOpen={isAuthModal} onClose={onCloseModal}/>
     </div>
   )
 }

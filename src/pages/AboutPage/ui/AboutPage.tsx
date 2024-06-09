@@ -5,7 +5,7 @@ import * as cls from './AboutPage.module.scss'
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 const AboutPage = () => {
-  const {t} = useTranslation('about');
+  const {t} = useTranslation('О себе');
   const [isModal, setIsModal] = useState(false);
 
   const onToggleModal = useCallback(() => {
@@ -17,9 +17,9 @@ const AboutPage = () => {
       <Button 
         theme={ThemeButton.OUTLINE}
         onClick={onToggleModal}
-        >
-          {t('О себе')}
-        </Button>
+      >
+        {t('О себе')}
+      </Button>
       <Modal isOpen={isModal} onClose={onToggleModal}>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         Libero, dolor similique? Enim culpa consequatur veniam atque 

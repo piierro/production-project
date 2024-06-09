@@ -4,7 +4,8 @@
 @import "reset";
 
 body {
-    font: var(--font-m);
+    font: var(--font-m); 
+    color: var(--primary-color);
 }
 
 .app {

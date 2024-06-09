@@ -1,9 +1,6 @@
 .Modal {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    inset: 0;
     opacity: 0;
     pointer-events: none;
     z-index: -1;
@@ -20,7 +17,7 @@
 
 .content {
   padding: 40px 40px 60px;
-  background: #930000;
+  background: var(--inverted-secondory-color);
   border-radius: 40px;
   transition: 0.3s transform;
   transform: scale(0.5);

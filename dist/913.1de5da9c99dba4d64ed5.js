@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkuubi_project=self.webpackChunkuubi_project||[]).push([[913],{913:(e,u,r)=>{r.r(u),r.d(u,{default:()=>n});var t=r(848),c=r(389);const n=function(){var e=(0,c.Bd)("project").t;return(0,t.jsx)("div",{children:e("О проектах")})}}}]);

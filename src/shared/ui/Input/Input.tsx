@@ -33,7 +33,7 @@ export const InputComponent = memo((props: InputProps) => {
   }, [autoFocus])
 
   return (
-    <div className={classNames(cls.Input, {}, [className])}>
+    <div className={classNames('', {}, [className])}>
       <input 
         type={type} 
         value={value}

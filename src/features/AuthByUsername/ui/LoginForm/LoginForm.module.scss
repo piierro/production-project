@@ -1,14 +1,19 @@
 .LoginForm {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    background: var(--inverted-bg-color);
 }
 
 .input {
-    margin-top: 10px;
+  width: 100%;
+  margin-bottom: 20px; 
 }
 
 .loginBtn {
-    margin-top: 15px;
-    margin-left: auto;
+    margin-top: 10px;
+    width: 100%;
 }

@@ -15,6 +15,7 @@
   background: var(--bg-color);
   color: var(--primary-color);
   border: none;
+  padding: 12px;
 }
 
 .backgroundInverted {
@@ -27,4 +28,8 @@
   padding: 12px 40px;
   background: var(--inverted-bg-color);
   color: var(--inverted-primary-color);
+}
+
+.disabled {
+  opacity: 0.5;
 }
